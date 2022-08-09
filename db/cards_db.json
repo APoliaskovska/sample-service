@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "bank_name": "First Bank",
+    "card_type": {"id":1, "type": "VISA"},
+    "card_number": "1234 1234 1234 1234",
+    "expires": "12/26",
+    "holder_name": "Credit card",
+    "cvv": 123
+  },
+  {
+    "id": 0,
+    "bank_name": "Second Bank",
+    "card_type": {"id":2, "type": "MASTERCARD"},
+    "card_number": "4321 4321 4321 4321",
+    "expires": "10/22",
+    "holder_name": "Payment card",
+    "cvv": 333
+  },
+  {
+    "id": 0,
+    "bank_name": "Third Bank",
+    "card_type": {"id":2, "type": "MASTERCARD"},
+    "card_number": "1234 1234 1234 1234",
+    "expires": "02/24",
+    "holder_name": "Credit card",
+    "cvv": 222
+  },
+  {
+    "id": 0,
+    "bank_name": "Forth Bank",
+    "card_type": {"id":1, "type": "VISA"},
+    "card_number": "1234 1234 1234 1234",
+    "expires": "02/24",
+    "holder_name": "Custom card",
+    "cvv": 222
+  }
+]

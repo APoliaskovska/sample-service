@@ -1,6 +1,19 @@
-{
+[{
   "id": 0,
-  "name": "Name",
-  "surname": "Surname",
+  "name": "Ivan",
+  "surname": "Ivanov",
   "date_birth": "12/12/2000"
-}
+},
+  {
+    "id": 1,
+    "name": "Test",
+    "surname": "User1",
+    "date_birth": "12/01/1999"
+  },
+  {
+    "id": 2,
+    "name": "Test",
+    "surname": "User2",
+    "date_birth": "01/01/1990"
+  }
+]

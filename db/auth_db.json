@@ -1,0 +1,14 @@
+[
+  {
+    "login": "Test",
+    "password": "12345",
+    "system": "ios",
+    "deviceId": "uuid"
+  },
+  {
+    "login":"foo@bar.com",
+    "password": "test123",
+    "system": "android",
+    "deviceId": "uuid"
+  }
+]

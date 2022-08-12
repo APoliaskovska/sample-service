@@ -1,9 +1,10 @@
-[{
-  "id": 0,
-  "name": "Ivan",
-  "surname": "Ivanov",
-  "date_birth": "12/12/2000"
-},
+[
+  {
+    "id": 0,
+    "name": "Ivan",
+    "surname": "Ivanov",
+    "date_birth": "12/12/2000"
+  },
   {
     "id": 1,
     "name": "Test",

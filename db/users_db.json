@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "login":"Test",
+    "login": "Test",
     "token": "12345"
   },
   {
     "id": 2,
-    "login":"User",
+    "login": "User",
     "token": "00000"
   }
 ]

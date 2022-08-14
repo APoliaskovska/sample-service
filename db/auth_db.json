@@ -6,7 +6,7 @@
     "deviceId": "uuid"
   },
   {
-    "login":"foo@bar.com",
+    "login": "foo@bar.com",
     "password": "test123",
     "system": "android",
     "deviceId": "uuid"

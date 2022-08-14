@@ -5,7 +5,7 @@ import 'package:proto_sample/generated/sample.pb.dart';
 final List<AuthRequest> authDb = _readAuthDb();
 
 List _getAuth() {
-  final jsonString = File('db/user_details_db.json').readAsStringSync();
+  final jsonString = File('db/auth_db.json').readAsStringSync();
   return jsonDecode(jsonString);
 }
 

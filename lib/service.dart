@@ -14,8 +14,9 @@ class SampleService extends SampleServiceBase {
 
   @override
   Future<User> loginWith(ServiceCall call, AuthRequest request) async {
-    final AuthRequest? auth = getAuthParams(request.login, request.password);
+    final auth = getAuthParams(request.login, request.password);
     if (auth == null) { return User(); }
+    final user = getUser(auth.login) ?? User();
     return getUser(auth.login) ?? User();
   }
 

@@ -14,8 +14,6 @@ List<PaymentCard> getCardsList(int id) {
 }
 
 List<PaymentCard> _readDb() {
-  final list = _getCardsList().first;
-  print("object list" + list.toString());
   return _getCardsList()
     .map((entry) => PaymentCard()
   ..id = entry['id']

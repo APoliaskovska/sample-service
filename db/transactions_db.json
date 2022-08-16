@@ -1,0 +1,84 @@
+[
+  {
+    "card_id": 0,
+    "transactions_list": [
+      {
+        "id": 125,
+        "date": "12/06/2021 12:23",
+        "status": "Success",
+        "reference_number": "AD443304040422",
+        "fee": 0.12,
+        "amount": 200.00,
+        "currency": "USD",
+        "details": "Confirmed",
+        "account_number": "121DGR5332D",
+        "type": "1"
+      },
+      {
+        "id": 126,
+        "date": "10/07/2021 14:01",
+        "status": "Success",
+        "reference_number": "AD44330404EE22",
+        "fee": 0.22,
+        "amount": 134.00,
+        "currency": "USD",
+        "details": "Confirmed",
+        "account_number": "121DGR5332D",
+        "type": "1"
+      },
+      {
+        "id": 145,
+        "date": "12/07/2021 20:08",
+        "status": "Fail",
+        "reference_number": "AD44330404EE22",
+        "fee": 0.31,
+        "amount": 294.00,
+        "currency": "USD",
+        "details": "Unknown error",
+        "account_number": "121DGR53241",
+        "type": "2"
+      },
+      {
+        "id": 155,
+        "date": "24/07/2021 08:11",
+        "status": "Success",
+        "reference_number": "AE44330255EE21",
+        "fee": 0.54,
+        "amount": 534.00,
+        "currency": "CHF",
+        "details": "Confirmed",
+        "account_number": "121DGR53FS2",
+        "type": "3"
+      },
+      {
+        "id": 189,
+        "date": "14/09/2021 10:28",
+        "status": "Fail",
+        "reference_number": "AD44330R0REE45",
+        "fee": 0.21,
+        "amount": 124.00,
+        "currency": "EUR",
+        "details": "Unknown error",
+        "account_number": "1214GR53231",
+        "type": "1"
+      }
+    ]
+  },
+  {
+    "card_id": 1,
+    "transactions_list": [
+      {
+        "id": 112,
+        "date": "12/03/2022 15:03",
+        "status": "Success",
+        "reference_number": "AA4733040E0423",
+        "fee": 0.16,
+        "amount": 209.20,
+        "currency": "USD",
+        "details": "Confirmed",
+        "account_number": "121DGR5332D",
+        "type": "1"
+      }
+    ]
+  }
+]

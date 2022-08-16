@@ -5,6 +5,7 @@ import 'package:proto_sample/generated/sample.pbgrpc.dart';
 import 'package:sample_service/auth_db_driver.dart';
 import 'package:sample_service/cards_db_driver.dart';
 import 'package:grpc/grpc.dart' as grpc;
+import 'package:sample_service/transaction_db_driver.dart';
 import 'package:sample_service/user_details_driver.dart';
 import 'package:sample_service/auth_db_driver.dart';
 import 'package:sample_service/users_db.dart';
@@ -39,6 +40,13 @@ class SampleService extends SampleServiceBase {
   Future<Cards> getCards(ServiceCall call, User request) async {
     print('Received question request from: $request');
     return Cards(id: request.id, cards: cardsDb);
+  }
+
+  //MARK: - TRANSACTIONS
+
+  @override
+  Future<TransactionsList> getTransactionsList(ServiceCall call, TransactionsListRequest request) async {
+    return getCardTransactions(request.cardId) ?? TransactionsList();
   }
 }
 

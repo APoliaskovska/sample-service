@@ -163,7 +163,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: fc2aad7cc93cd469f9fdb58af2b650021b739f66
+      resolved-ref: "1925d8f6a3a72fe0833e0d488a10b2bc7d29a096"
       url: "git@github.com:APoliaskovska/proto_sample.git"
     source: git
     version: "0.0.1"

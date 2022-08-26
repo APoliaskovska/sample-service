@@ -29,6 +29,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  sqflite:
+  path:
   grpc: ^3.0.0
   proto_sample:
     git: git@github.com:APoliaskovska/proto_sample.git

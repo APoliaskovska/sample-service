@@ -32,7 +32,8 @@ dependencies:
   grpc: ^3.0.0
   proto_sample:
     git: git@github.com:APoliaskovska/proto_sample.git
-
+  realm: ^0.4.0+beta
+  path_provider: ^2.0.11
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

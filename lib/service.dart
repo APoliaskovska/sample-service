@@ -6,8 +6,8 @@ import 'package:sample_service/auth_db_driver.dart';
 import 'package:sample_service/cards_db_driver.dart';
 import 'package:grpc/grpc.dart' as grpc;
 import 'package:sample_service/transaction_db_driver.dart';
+import 'package:sample_service/upload_db_driver.dart';
 import 'package:sample_service/user_details_driver.dart';
-import 'package:sample_service/auth_db_driver.dart';
 import 'package:sample_service/users_db.dart';
 
 class SampleService extends SampleServiceBase {
@@ -17,7 +17,6 @@ class SampleService extends SampleServiceBase {
   Future<User> loginWith(ServiceCall call, AuthRequest request) async {
     final auth = getAuthParams(request.login, request.password);
     if (auth == null) { return User(); }
-    final user = getUser(auth.login) ?? User();
     return getUser(auth.login) ?? User();
   }
 
@@ -48,6 +47,27 @@ class SampleService extends SampleServiceBase {
   Future<TransactionsList> getTransactionsList(ServiceCall call, TransactionsListRequest request) async {
     return getCardTransactions(request.cardId) ?? TransactionsList();
   }
+
+  @override
+  Future<FileUploadChunkResponse> uploadFileChunk(ServiceCall call, FileUploadChunkRequest request) async {
+   // RealmService().insertDoc(request.name, request.chunk, request.type, request.uuid);
+    return addDocInDB(request);//await addDocInDB(request);
+  }
+//
+//   @override
+//   Future<UploadDocResponse> uploadImagqqe(ServiceCall call, Stream<UploadDocRequest> request) async {
+//     UploadDocResponse response = UploadDocResponse();
+//     // request.listen((content) async {
+//     //   id = await addDocInDB(content);
+//     // });
+//
+//      await for(var v in request) {
+//        response = await addDocInDB(v);
+//     }
+//     return response;
+// //    return UploadDocResponse(id: "0", size: 0)!;
+//   }
+
 }
 
 class Server {
@@ -55,7 +75,6 @@ class Server {
     final server = grpc.Server([SampleService()]);
     await server.serve(port: 5555);
     print('Serving on the port: ${server.port}');
-
   }
 }
 

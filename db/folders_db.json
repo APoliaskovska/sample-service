@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Main Folder",
+    "description": "Test description",
+    "access": "1",
+    "filesIds": [
+      1,
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Customers",
+    "description": "Folder with customers data",
+    "access": "1",
+    "filesIds": [
+      1,
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Campaigns",
+    "description": "Folder with campaigns data",
+    "access": "1",
+    "filesIds": [
+      1,
+      2,
+      3,
+      5
+    ]
+  }
+]

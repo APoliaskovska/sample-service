@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "name": "file1",
+    "format": "pdf",
+    "url": "https://easyupload.io/knwgk9",
+    "access": "1"
+  },
+  {
+    "id": "2",
+    "name": "doc_copy",
+    "format": "xls",
+    "url": "https://easyupload.io/knwgk9",
+    "access": "1"
+  },
+  {
+    "id": "3",
+    "name": "personal_info",
+    "format": "doc",
+    "url": "https://easyupload.io/knwgk9",
+    "access": "1"
+  },
+  {
+    "id": "4",
+    "name": "staff",
+    "format": "xls",
+    "url": "https://easyupload.io/knwgk9",
+    "access": "1"
+  },
+  {
+    "id": "4",
+    "name": "file2_copy",
+    "format": "pdf",
+    "url": "https://easyupload.io/knwgk9",
+    "access": "1"
+  }
+]

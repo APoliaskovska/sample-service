@@ -5,6 +5,7 @@ import 'package:proto_sample/generated/sample.pbgrpc.dart';
 import 'package:sample_service/auth_db_driver.dart';
 import 'package:sample_service/cards_db_driver.dart';
 import 'package:grpc/grpc.dart' as grpc;
+import 'package:sample_service/folder_files_db_driver.dart';
 import 'package:sample_service/transaction_db_driver.dart';
 import 'package:sample_service/upload_db_driver.dart';
 import 'package:sample_service/user_details_driver.dart';
@@ -48,26 +49,32 @@ class SampleService extends SampleServiceBase {
     return getCardTransactions(request.cardId) ?? TransactionsList();
   }
 
+  //MARK: - UPLOAD
+
   @override
   Future<FileUploadChunkResponse> uploadFileChunk(ServiceCall call, FileUploadChunkRequest request) async {
    // RealmService().insertDoc(request.name, request.chunk, request.type, request.uuid);
     return addDocInDB(request);//await addDocInDB(request);
   }
-//
-//   @override
-//   Future<UploadDocResponse> uploadImagqqe(ServiceCall call, Stream<UploadDocRequest> request) async {
-//     UploadDocResponse response = UploadDocResponse();
-//     // request.listen((content) async {
-//     //   id = await addDocInDB(content);
-//     // });
-//
-//      await for(var v in request) {
-//        response = await addDocInDB(v);
-//     }
-//     return response;
-// //    return UploadDocResponse(id: "0", size: 0)!;
-//   }
 
+  @override
+  Stream<FileData> downloadFile(ServiceCall call, DownloadFileRequest request) {
+    return getFileFromFileId(request.fileId).asStream();
+  }
+
+  //MARK: - FILE FOLDERS
+
+  @override
+  Future<FileFoldersResponse> getFileFolders(ServiceCall call, FileFoldersRequest request) async {
+    List<FileFolder> folders = getFolders() ?? [];
+    return FileFoldersResponse(userId: request.userId, folders: folders);
+  }
+
+  @override
+  Future<FilesFromFoldersResponse> getFilesFromFolder(ServiceCall call, FilesFromFoldersRequest request) async {
+    List<FileObject> files = getFilesFromFolderId(request.folderId) ?? [];
+    return FilesFromFoldersResponse(userId: request.userId, files: files);
+  }
 }
 
 class Server {
